@@ -8,6 +8,7 @@
 <body>
 
     <div class="container">
+        <button id="playButton1">NO</button>
         <button id="playButton">OK</button>
         <audio id="music" src="hello.mp3"></audio>
     </div>
@@ -28,8 +29,19 @@ body {
 
 .container {
     text-align: center;
+    display: flex;
+    gap: 40px;
 }
-
+#playButton1 {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #a5af4c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 #playButton {
     padding: 15px 30px;
     font-size: 18px;
@@ -48,6 +60,11 @@ body {
 
 <script>
 document.getElementById('playButton').addEventListener('click', function() {
+    var music = document.getElementById('music');
+    music.volume = 1; // Set volume to 100% (1 is max)
+    music.play(); // Play the audio
+});
+document.getElementById('playButton1').addEventListener('click', function() {
     var music = document.getElementById('music');
     music.volume = 1; // Set volume to 100% (1 is max)
     music.play(); // Play the audio
