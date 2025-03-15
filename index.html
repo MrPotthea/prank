@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Music</title>
+</head>
+<body>
+
+    <div class="container">
+        <button id="playButton">OK</button>
+        <audio id="music" src="VITO - STILL ZIN [OFFICIAL AUDIO].mp3"></audio>
+    </div>
+
+</body>
+</html>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+#playButton {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#playButton:hover {
+    background-color: #45a049;
+}
+</style>
+
+<script>
+document.getElementById('playButton').addEventListener('click', function() {
+    var music = document.getElementById('music');
+    music.volume = 1; // Set volume to 100% (1 is max)
+    music.play(); // Play the audio
+});
+</script>
